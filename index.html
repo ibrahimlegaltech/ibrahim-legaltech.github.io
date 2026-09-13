@@ -1,66 +1,91 @@
 <!DOCTYPE html>
 <html lang="bn" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>মোঃ ইব্রাহীম হোসেন | লিগ্যাল-টেক ও ল্যান্ড ফরেনসিক্স</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://unpkg.com/lucide@latest"></script>
-<style>
-    body { font-family: 'Hind Siliguri', sans-serif; background-color: #020617; color: #cbd5e1; }
-    .glass-panel { background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 24px; }
-    .calc-input { background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 10px; padding: 8px; color: #fff; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>মোঃ ইব্রাহীম হোসেন | লিগ্যাল-টেক ও ল্যান্ড ফরেনসিক্স</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; background-color: #020617; color: #cbd5e1; }
+        .glass { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+        .service-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); }
+    </style>
 </head>
-<body class="antialiased">
+<body class="p-4 md:p-8">
+    <main class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-3xl md:text-5xl font-bold text-white mb-2">মোঃ ইব্রাহীম হোসেন</h1>
+            <p class="text-amber-400 font-semibold text-lg">লিগ্যাল টেকনোলজিস্ট ও নিবন্ধিত আইনজীবী সহকারী | BTEB সার্টিফাইড আমিন</p>
+        </header>
 
-<main class="container mx-auto px-6 py-12 max-w-4xl">
-    <!-- Hero -->
-    <div class="text-center mb-16">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">মোঃ ইব্রাহীম হোসেন</h1>
-        <p class="text-amber-400 font-bold text-lg">লিগ্যাল টেকনোলজিস্ট ও নিবন্ধিত আইনজীবী সহকারী (মোহুরী) | BTEB সার্টিফাইড আমিন</p>
-    </div>
+        <!-- Calculator -->
+        <section class="glass p-6 rounded-2xl mb-12">
+            <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2"><i data-lucide="calculator"></i> আনা-গণ্ডা ক্যালকুলেটর</h2>
+            <div class="grid grid-cols-5 gap-2 mb-4">
+                <input type="number" id="ana" placeholder="আনা" class="bg-black p-2 rounded">
+                <input type="number" id="ganda" placeholder="গণ্ডা" class="bg-black p-2 rounded">
+                <input type="number" id="kora" placeholder="কড়া" class="bg-black p-2 rounded">
+                <input type="number" id="kranti" placeholder="ক্রান্তি" class="bg-black p-2 rounded">
+                <input type="number" id="til" placeholder="তিল" class="bg-black p-2 rounded">
+            </div>
+            <button onclick="calc()" class="w-full bg-emerald-600 py-2 rounded-lg font-bold">হিসাব করুন</button>
+            <div id="res" class="mt-4 text-center font-bold text-emerald-400"></div>
+        </section>
 
-    <!-- Calculator -->
-    <section id="calculator" class="glass-panel p-8 mb-12 border border-emerald-500/30">
-        <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-            <i data-lucide="calculator"></i> আনা-গণ্ডা ও হিস্যা ক্যালকুলেটর
-        </h2>
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
-            <div><label class="text-[10px] block">আনা</label><input type="number" id="ana" class="calc-input w-full" value="0"></div>
-            <div><label class="text-[10px] block">গণ্ডা</label><input type="number" id="ganda" class="calc-input w-full" value="0"></div>
-            <div><label class="text-[10px] block">কড়া</label><input type="number" id="kora" class="calc-input w-full" value="0"></div>
-            <div><label class="text-[10px] block">ক্রান্তি</label><input type="number" id="kranti" class="calc-input w-full" value="0"></div>
-            <div><label class="text-[10px] block">তিল</label><input type="number" id="til" class="calc-input w-full" value="0"></div>
-        </div>
-        <button onclick="calculate()" class="w-full bg-emerald-600 py-3 rounded-xl font-bold">হিসাব করুন</button>
-        <div id="result" class="mt-6 text-xl font-bold text-emerald-400 text-center"></div>
-    </section>
+        <!-- Services List -->
+        <section>
+            <h2 class="text-2xl font-bold text-white mb-6">আমাদের সেবাসমূহ (২০টি উইং)</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <!-- Service List -->
+                <ul class="space-y-2 text-sm">
+                    <li>✅ স্বত্ব ঘোষণা ও দখল পুনরুদ্ধার</li>
+                    <li>✅ ১৬ আনা বাটোয়ারা সহম ও আরজি</li>
+                    <li>✅ জাল দলিল বাতিল ও বালাম অডিট</li>
+                    <li>✅ দেওয়ানি ৩৯ আদেশ নিষেধাজ্ঞা</li>
+                    <li>✅ জেরা সহায়িকা ও লিগ্যাল স্ক্রিপ্ট</li>
+                    <li>✅ BTM স্যাটেলাইট মৌজা ম্যাপিং</li>
+                    <li>✅ জবরদখল ও সীমানা বিচ্যুতি রিপোর্ট</li>
+                    <li>✅ সার্ভে কমিশন রিপোর্ট</li>
+                    <li>✅ স্যাটেলাইট টাইমলাইন ম্যাপিং</li>
+                    <li>✅ ডিজিটাল ভূমি প্রোফাইল</li>
+                </ul>
+                <ul class="space-y-2 text-sm">
+                    <li>✅ ই-নামজারি ও ট্র্যাকিং</li>
+                    <li>✅ নামজারি বাতিল ও মিস কেস</li>
+                    <li>✅ অনলাইন ভূমি উন্নয়ন কর</li>
+                    <li>✅ পর্চা ও বালাম নকল সংগ্রহ</li>
+                    <li>✅ পারিবারিক বণ্টননামা দলিল</li>
+                    <li>✅ মুসলিম আইন অনুযায়ী হেবা দলিল</li>
+                    <li>✅ প্রবাসী আমমোক্তারনামা</li>
+                    <li>✅ কিউআর কোড জালিয়াতি অডিট</li>
+                    <li>✅ অনলাইন আর্থিক লেনদেন ট্র্যাকিং</li>
+                    <li>✅ সাইবার ডিজিটাল সাক্ষ্য অডিট</li>
+                </ul>
+            </div>
+        </section>
 
-    <!-- Chambers -->
-    <section class="glass-panel p-8">
-        <h2 class="text-xl font-bold text-white mb-4">চেম্বার ও যোগাযোগ</h2>
-        <div class="space-y-4 text-sm text-slate-300">
-            <p>📍 <strong>চিকন্দী চেম্বার:</strong> কালী বাড়ীর সামনে, স্কুল রোড, চিকন্দী।</p>
-            <p>📍 <strong>শরীয়তপুর চেম্বার:</strong> জেলা আইনজীবী সমিতি ভবনের দক্ষিণ পার্শ্বে।</p>
-            <p>📞 <strong>মোবাইল:</strong> +8801715354960</p>
-            <p>📧 <strong>ইমেইল:</strong> ibrahim.legaltech@gmail.com</p>
-        </div>
-    </section>
-</main>
+        <!-- Contact -->
+        <section class="glass p-6 rounded-2xl mt-12">
+            <h2 class="text-xl font-bold text-white mb-4">চেম্বার ও যোগাযোগ</h2>
+            <p>📍 চিকন্দী: কালী বাড়ীর সামনে, স্কুল রোড, চিকন্দী।</p>
+            <p>📍 শরীয়তপুর: জেলা আইনজীবী সমিতি ভবনের দক্ষিণ পার্শ্বে।</p>
+            <p>📞 +8801715354960 | 📧 ibrahim.legaltech@gmail.com</p>
+        </section>
+    </main>
 
-<script>
-    function calculate() {
-        const ana = parseFloat(document.getElementById('ana').value) || 0;
-        const ganda = parseFloat(document.getElementById('ganda').value) || 0;
-        const kora = parseFloat(document.getElementById('kora').value) || 0;
-        const kranti = parseFloat(document.getElementById('kranti').value) || 0;
-        const til = parseFloat(document.getElementById('til').value) || 0;
-        const totalTil = (ana * 4800) + (ganda * 240) + (kora * 60) + (kranti * 20) + til;
-        const result = (totalTil / 76800 * 100).toFixed(2);
-        document.getElementById('result').innerText = "প্রাপ্য অংশ: " + result + "% (শতক)";
-    }
-    lucide.createIcons();
-</script>
+    <script>
+        function calc() {
+            const a = parseFloat(document.getElementById('ana').value) || 0;
+            const g = parseFloat(document.getElementById('ganda').value) || 0;
+            const k = parseFloat(document.getElementById('kora').value) || 0;
+            const kr = parseFloat(document.getElementById('kranti').value) || 0;
+            const t = parseFloat(document.getElementById('til').value) || 0;
+            const res = ((a*4800 + g*240 + k*60 + kr*20 + t) / 76800 * 100).toFixed(2);
+            document.getElementById('res').innerText = "প্রাপ্য জমি: " + res + " শতক";
+        }
+        lucide.createIcons();
+    </script>
 </body>
 </html>
