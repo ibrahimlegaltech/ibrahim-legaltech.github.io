@@ -1,79 +1,598 @@
 <!DOCTYPE html>
 <html lang="bn" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0">
-    <title>মোঃ ইব্রাহীম হোসেন | লিগ্যাল-টেক, ল্যান্ড ফরেনসিক্স ও দেওয়ানি চেম্বার</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        body { font-family: 'Hind Siliguri', sans-serif; background-color: #020617; color: #cbd5e1; }
-        .glass-panel { background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 24px; }
-        .service-card { border-radius: 20px; padding: 1.5rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0,viewport-fit=cover">
+<meta name="theme-color" content="#020617">
+<title>মোঃ ইব্রাহীম হোসেন | লিগ্যাল-টেক, ল্যান্ড ফরেনসিক্স ও দেওয়ানি চেম্বার | শরীয়তপুর ও চিকন্দী জজকোর্ট</title>
+<meta name="description" content="চিকন্দী সিনিয়র সিভিল জজ আদালত ও শরীয়তপুর জেলা জজ কোর্ট এখতিয়ারাধীন ডিজিটাল ভূমি সেবা, সর্বপ্রকার ই-নামজারি ও ট্র্যাকিং, খাজনা দাখিলা, সিএস-এসএ-আরএস-বিআরএস খতিয়ান চেইন, বালাম তল্লাশি, ডিজিটাল ভূমি জরিপ এবং দেওয়ানি আরজি-জবাব ড্রাফটিং।">
+<meta name="keywords" content="মোঃ ইব্রাহীম হোসেন, লিগ্যাল টেকনোলজিস্ট, আইনজীবী সহকারী, মোহুরী, বিটিইবি সার্টিফাইড আমিন, ল্যান্ড সার্ভেয়ার, চিকন্দী সিনিয়র সিভিল জজ আদালত, শরীয়তপুর জেলা জজ কোর্ট, শরীয়তপুর জমি পরিমাপ, ই-নামজারি, নামজারি ট্র্যাকিং, খাজনা প্রদান, খতিয়ান চেইন, বাটোয়ারা মামলা ড্রাফটিং, মিস কেস">
+<link rel="canonical" href="https://ibrahim-legaltech.github.io/">
+
+<!-- 🌐 Fonts & External Libraries -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700;800&family=Montserrat:wght@700;900&family=JetBrains+Mono:wght@600;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- 💎 LOCAL BUSINESS & DUAL-CHAMBER JSON-LD SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://ibrahim-legaltech.github.io/#person",
+      "name": "MD Ibrahim Hossain",
+      "alternateName": "মোঃ ইব্রাহীম হোসেন",
+      "jobTitle": "Legal Technocrat & Registered Advocate's Assistant | BTEB Certified Land Surveyor",
+      "telephone": "+8801715354960",
+      "email": "ibrahim.legaltech@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Chikandi Chamber: School Road, In front of Kali Bari | Shariatpur Chamber: South Side of District Bar Association",
+        "addressLocality": "Shariatpur Sadar",
+        "addressRegion": "Shariatpur",
+        "addressCountry": "Bangladesh"
+      },
+      "knowsAbout": [
+        "Digital Land Record Services",
+        "E-Mutation Application & Tracking",
+        "Land Development Tax Assessment",
+        "Land Record Forensics",
+        "CS SA RS BRS Chain of Title",
+        "Deed Forgery Analysis",
+        "Digital Land Surveying",
+        "Civil Litigation Drafting",
+        "Partition Suit Schedule Preparation",
+        "Mutation Mis Case Appeals"
+      ]
+    },
+    {
+      "@type": "LegalService",
+      "@id": "https://ibrahim-legaltech.github.io/#service",
+      "name": "Legal-Tech & Land Forensics Chamber",
+      "alternateName": "লিগ্যাল-টেক ও ল্যান্ড ফরেনসিক্স চেম্বার",
+      "image": "https://raw.githubusercontent.com/ibrahim-legaltech/legaltech-assets/main/logo-main.png",
+      "telephone": "+8801715354960",
+      "priceRange": "৳৳",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Shariatpur Sadar & Chikandi",
+        "addressRegion": "Shariatpur",
+        "addressCountry": "BD"
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+body {
+  font-family: 'Hind Siliguri', sans-serif;
+  background-color: #020617;
+  color: #cbd5e1;
+  overflow-x: hidden;
+}
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+.bg-grid {
+  background-image: radial-gradient(rgba(245, 158, 11, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+.glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+}
+.service-card {
+  border-radius: 20px;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(15px);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+.calc-input {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 10px;
+  padding: 8px 12px;
+  color: #fff;
+  font-weight: 700;
+  outline: none;
+  transition: all 0.3s;
+}
+.calc-input:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
+}
+@media print {
+  body { background: #ffffff !important; color: #000000 !important; }
+  .no-print { display: none !important; }
+  .service-card, .glass-panel { background: #ffffff !important; border: 1px solid #cbd5e1 !important; color: #000000 !important; box-shadow: none !important; }
+  h1, h2, h3, h4, p, span, strong { color: #000000 !important; }
+}
+</style>
 </head>
-<body class="p-6 md:p-12">
-    <main class="max-w-6xl mx-auto space-y-12">
-        
-        <!-- Header -->
-        <header class="text-center">
-            <h1 class="text-4xl font-extrabold text-white mb-2">মোঃ ইব্রাহীম হোসেন</h1>
-            <p class="text-amber-400 font-bold text-lg">লিগ্যাল টেকনোলজিস্ট ও নিবন্ধিত আইনজীবী সহকারী (মোহুরী) | BTEB সার্টিফাইড আমিন</p>
-        </header>
+<body class="bg-grid antialiased min-h-screen selection:bg-amber-500 selection:text-black pb-24 md:pb-0">
 
-        <!-- Services Section -->
-        <section id="wings" class="space-y-8">
-            <h2 class="text-2xl font-bold text-white border-b border-amber-500/30 pb-4">আমাদের ২০টি বিশেষায়িত লিগ্যাল-টেক সার্ভিস</h2>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <!-- 01-05: দেওয়ানি মামলা -->
-                <div class="service-card text-xs space-y-2">
-                    <h3 class="font-bold text-amber-400">দেওয়ানি মামলা ফরেনসিক্স</h3>
-                    <p>১. স্বত্ব ঘোষণা ও দখল পুনরুদ্ধার আরজি</p>
-                    <p>২. ১৬ আনা বাটোয়ারা সহম ও আরজি</p>
-                    <p>৩. জাল দলিল বাতিল ও বালাম অডিট</p>
-                    <p>৪. দেওয়ানি ৩৯ আদেশ নিষেধাজ্ঞা</p>
-                    <p>৫. মোক্ষম জেরা সহায়িকা</p>
-                </div>
+<!-- 🏛️ STICKY HEADER -->
+<header class="fixed w-full z-50 bg-[#020617]/95 backdrop-blur-xl border-b border-white/5">
+<div class="container mx-auto px-6 py-3.5 flex flex-wrap justify-between items-center">
+  <!-- Brand Identity -->
+  <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
+    <div class="w-10 h-10 rounded-xl border border-amber-500/40 bg-slate-900 flex items-center justify-center shadow-lg shadow-amber-500/10 overflow-hidden">
+      <img src="./assets/logo-main.png" alt="Legal Logo" class="w-full h-full object-contain" onerror="this.onerror=null; this.parentElement.innerHTML='<i data-lucide=\'scale\' class=\'w-6 h-6 text-amber-400\'></i>'; lucide.createIcons();">
+    </div>
+    <div class="flex flex-col text-left leading-tight">
+      <span class="text-lg font-bold text-white tracking-tight">মোঃ ইব্রাহীম হোসেন</span>
+      <span class="text-[9px] font-semibold text-amber-400 uppercase tracking-wider">লিগ্যাল-টেক ও ল্যান্ড ফরেনসিক্স</span>
+    </div>
+  </div>
 
-                <!-- 06-09: ডিজিটাল ভূমি জরিপ -->
-                <div class="service-card text-xs space-y-2">
-                    <h3 class="font-bold text-emerald-400">ডিজিটাল ভূমি জরিপ ও ম্যাপিং</h3>
-                    <p>৬. BTM স্যাটেলাইট মৌজা ম্যাপিং</p>
-                    <p>৭. জবরদখল ও সীমানা বিচ্যুতি রিপোর্ট</p>
-                    <p>৮. দেওয়ানি ২৬ আদেশ ৯ রুল সার্ভে</p>
-                    <p>৯. ঐতিহাসিক স্যাটেলাইট টাইমলাইন</p>
-                </div>
+  <!-- Mobile Menu Button -->
+  <button id="menu-btn" class="md:hidden text-slate-400 hover:text-white p-2" aria-label="Menu">
+    <i data-lucide="menu" class="w-6 h-6"></i>
+  </button>
 
-                <!-- 10-14: ভূমি প্রশাসন -->
-                <div class="service-card text-xs space-y-2">
-                    <h3 class="font-bold text-cyan-400">অনলাইন ভূমি প্রশাসন</h3>
-                    <p>১০. ডিজিটাল ভূমি প্রোফাইল</p>
-                    <p>১১. সর্বপ্রকার ই-নামজারি ও ট্র্যাকিং</p>
-                    <p>১২. নামজারি বাতিল ও মিস কেস</p>
-                    <p>১৩. অনলাইন ভূমি উন্নয়ন কর (খাজনা)</p>
-                    <p>১৪. ডিসি রেকর্ড রুম পর্চা ও নকল</p>
-                </div>
+  <!-- Navigation -->
+  <nav id="mobile-menu" class="w-full md:w-auto mt-4 md:mt-0 flex-col md:flex-row flex items-center gap-5 hidden md:flex">
+    <a href="#calculator" class="text-xs font-semibold text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-1"><i data-lucide="calculator" class="w-3.5 h-3.5"></i> আনা-গণ্ডা ক্যালকুলেটর</a>
+    <a href="#engines" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors flex items-center gap-1"><i data-lucide="cpu" class="w-3.5 h-3.5"></i> ১০টি এআই ইঞ্জিন</a>
+    <a href="#wings" class="text-xs font-semibold text-slate-300 hover:text-amber-400 transition-colors">সেবা উইং ও ২০-SLA</a>
+    <a href="#chamber" class="text-xs font-semibold text-slate-300 hover:text-amber-400 transition-colors">চেম্বার ও যোগাযোগ</a>
+    <a href="#faq" class="text-xs font-semibold text-slate-300 hover:text-amber-400 transition-colors">প্রশ্নোত্তর</a>
+    <a href="https://wa.me/8801715354960?text=আসসালামু%20আলাইকুম%20ইব্রাহীম%20ভাই,%20আমি%20পরামর্শ%20নিতে%20চাই।" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2 rounded-full text-xs font-bold transition-all shadow-md shadow-emerald-600/20 flex items-center gap-1.5">
+      <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> হোয়াটসঅ্যাপ চ্যাট
+    </a>
+  </nav>
+</div>
+</header>
 
-                <!-- 15-20: পারিবারিক ও ফরেনসিক্স -->
-                <div class="service-card text-xs space-y-2">
-                    <h3 class="font-bold text-purple-400">পারিবারিক ও ডিজিটাল ফরেনসিক্স</h3>
-                    <p>১৫. পারিবারিক আপস-বণ্টননামা</p>
-                    <p>১৬. মুসলিম আইন হেবা দলিল</p>
-                    <p>১৭. প্রবাসী আমমোক্তারনামা</p>
-                    <p>১৮. কিউআর কোড জালিয়াতি অডিট</p>
-                    <p>১৯. অনলাইন আর্থিক লেনদেন ট্র্যাকিং</p>
-                    <p>২০. ডিজিটাল সাক্ষ্য অডিট (ধারা ৬৫বি)</p>
-                </div>
-            </div>
-        </section>
+<main class="pt-28 md:pt-36 pb-20 container mx-auto px-6 max-w-6xl space-y-24">
 
-        <!-- Footer -->
-        <footer class="glass-panel p-8 text-center text-sm">
-            <p>📍 চিকন্দী ও শরীয়তপুর জেলা জজকোর্ট চেম্বার</p>
-            <p>📞 +8801715354960 | 📧 ibrahim.legaltech@gmail.com</p>
-        </footer>
-    </main>
-    <script>lucide.createIcons();</script>
+<!-- 👑 HERO SECTION -->
+<section class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 border-b border-white/5 pb-16">
+  <div class="space-y-6 text-center lg:text-left max-w-2xl">
+    
+    <!-- Live Status -->
+    <div class="flex items-center justify-center lg:justify-start">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold border border-emerald-500/20 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> চেম্বার ও অনলাইন সেবা সক্রিয়
+      </div>
+    </div>
+
+    <!-- 🌟 HIGH-CONTRAST GOLDEN DESIGNATION BADGE -->
+    <div class="p-4 rounded-2xl bg-gradient-to-r from-amber-500/20 via-yellow-500/15 to-amber-500/20 border-2 border-amber-400/50 shadow-[0_0_30px_rgba(245,158,11,0.25)] text-center lg:text-left">
+      <p class="text-sm md:text-base font-extrabold text-yellow-300 tracking-wide leading-snug drop-shadow">
+        লিগ্যাল টেকনোলজিস্ট ও নিবন্ধিত আইনজীবী সহকারী (মোহুরী)
+      </p>
+      <p class="text-xs md:text-sm font-bold text-amber-200 mt-1 tracking-wide">
+        BTEB সার্টিফাইড আমিন (ল্যান্ড সার্ভেয়ার) | ডাটা ও ইমেজ ফরেনসিক স্পেশালিস্ট
+      </p>
+    </div>
+    
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight">
+      জমিজমার জটিল খতিয়ান, ই-নামজারি ও দেওয়ানি মামলার <br>
+      <span class="text-amber-400" style="text-shadow: 0 0 25px rgba(245,158,11,0.4);">অকাট্য ডিজিটাল সমাধান।</span>
+    </h1>
+    
+    <p class="text-slate-300 text-sm md:text-base leading-relaxed">
+      ডিজিটাল ভূমি প্রশাসন সেবা (ই-নামজারি, খাজনা ও ট্র্যাকিং), সিএস (CS) থেকে বিআরএস (BRS) খতিয়ান চেইন, বালাম তল্লাশি, ডিজিটাল মৌজা জরিপ এবং দেওয়ানি মামলার আরজি-জবাব ড্রাফটিংয়ের নির্ভরযোগ্য চেম্বার।
+    </p>
+
+    <!-- CTAs -->
+    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-3.5 pt-2">
+      <a href="https://wa.me/8801715354960?text=আসসালামু%20আলাইকুম%20ইব্রাহীম%20ভাই,%20আমি%20পরামর্শ%20নিতে%20চাই।" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-7 py-3.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-emerald-600/25">
+        <i data-lucide="message-circle" class="w-4 h-4"></i> হোয়াটসঅ্যাপে আলোচনা করুন
+      </a>
+      <a href="mailto:ibrahim.legaltech@gmail.com?subject=দলিল/খতিয়ান%20বা%20মামলার%20ফাইল%20যাচাইয়ের%20আবেদন" class="bg-amber-500 hover:bg-amber-400 text-black px-7 py-3.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-amber-500/25">
+        <i data-lucide="mail" class="w-4 h-4"></i> ইমেইলে ফাইল পাঠান
+      </a>
+    </div>
+
+    <!-- Credential Strip -->
+    <div class="pt-3 flex flex-wrap justify-center lg:justify-start gap-5 text-xs text-slate-300 font-medium">
+      <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> বিটিইবি সনদপ্রাপ্ত আমিন</span>
+      <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> জজ কোর্ট আইনজীবী সহকারী</span>
+      <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400"></i> দেওয়ানি ও ভূমি রেকর্ড বিশ্লেষক</span>
+    </div>
+  </div>
+
+  <!-- Hero Visual Banner -->
+  <div class="relative mx-auto lg:mx-0 w-full max-w-md">
+    <div class="rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-slate-900/80 p-2 relative shadow-amber-500/10">
+      <img src="./assets/banner.png" alt="Legal-Tech Command Banner" class="w-full h-auto object-cover rounded-2xl" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80';">
+      <div class="absolute bottom-4 left-4 right-4 p-3.5 bg-slate-950/90 backdrop-blur-md rounded-xl border border-amber-500/30 text-left">
+        <p class="text-[10px] text-amber-400 font-bold uppercase tracking-wider">চিকন্দী চেম্বার ও শরীয়তপুর জেলা জজকোর্ট চেম্বার</p>
+        <p class="text-xs text-white font-bold mt-0.5">দেওয়ানি মামলা, খতিয়ান চেইন ও ডিজিটাল ভূমি সেবা</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⚡ NEW: THE 10 AUTONOMOUS AI ENGINES SHOWCASE -->
+<section id="engines" class="glass-panel p-6 md:p-10 border-cyan-500/30 reveal">
+  <div class="text-left border-b border-white/10 pb-4 mb-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+    <div>
+      <h2 class="text-xl md:text-2xl font-bold text-white flex items-center gap-2">
+        <i data-lucide="cpu" class="w-6 h-6 text-cyan-400"></i>
+        চেম্বার চালিত ১০টি স্বয়ংক্রিয় এআই ইঞ্জিন (Deca-Core Suite)
+      </h2>
+      <p class="text-xs text-slate-400 mt-1">আদালত ও ডিজিটাল ভূমি ব্যবস্থাপনায় শতভাগ নির্ভুল ফলাফল নিশ্চিতে আমাদের নিজস্ব কম্পিউটেশনাল ইঞ্জিনসমূহ</p>
+    </div>
+    <span class="text-[10px] font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 px-3 py-1 rounded-full uppercase tracking-wider font-bold">Autonomous AI Core</span>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 text-left">
+    <div class="p-4 rounded-xl bg-slate-900/60 border border-white/5 hover:border-cyan-500/40 transition-all">
+      <div class="text-cyan-400 font-mono text-[10px] font-bold">ENGINE 01</div>
+      <h3 class="text-xs font-bold text-white mt-1">Court Land Schedule</h3>
+      <p class="text-[11px] text-slate-400 mt-1 leading-snug">চার জরিপের ধারাবাহিক তফশিল ও সার্ভেয়ার সিল।</p>
+    </div>
+    <div class="p-4 rounded-xl bg-slate-900/60 border border-white/5 hover:border-cyan-500/40 transition-all">
+      <div class="text-cyan-400 font-mono text-[10px] font-bold">ENGINE 02</div>
+      <h3 class="text-xs font-bold text-white mt-1">Citizen Profile Hub</h3>
+      <p class="text-[11px] text-slate-400 mt-1 leading-snug">এনআইডি ভেরিফাইড প্রোফাইল ও লগইন হ্যান্ডওভার স্লিপ।</p>
+    </div>
+    <div class="p-4 rounded-xl bg-slate-900/60 border border-white/5 hover:border-cyan-500/40 transition-all">
+      <div class="text-cyan-400 font-mono text-[10px] font-bold">ENGINE 03</div>
+      <h3 class="text-xs font-bold text-white mt-1">Khatian Print Master</h3>
+      <p class="text-[11px] text-slate-400 mt-1 leading-snug">বিআরএস/আরএস/সিএস খতিয়ানের সরকারি অনুলিপি প্রিন্ট।</p>
+    </div>
+    <div class="p-4 rounded-xl bg-slate-900/60 border border-white/5 hover:border-cyan-500/40 transition-all">
+      <div class="text-cyan-400 font-mono text-[10px] font-bold">ENGINE 04</div>
+      <h3 class="text-xs font-bold text-white mt-1">Land Forensic Audit</h3>
+      <p class="text-[11px] text-slate-400 mt-1 leading-snug">নামজারি জালিয়াতি, ফারায়েজ ও জমির স্ফীতি শনাক্তকরণ।</p>
+    </div>
+    <div class="p-4 rounded-xl bg-slate-900/60 border border-white/5 hover:border-cyan-500/40 transition-all">
+      <div class="text-cyan-400 font-mono text-[10px] font-bold">ENGINE 05</div>
+      <h3 class="text-xs font-bold text-white mt-1">QGIS Cadastral Forge</h3>
+      <p class="text-[11px] text-slate-400 mt-1 leading-snug">মৌজা ম্যাপ জিআইএস সুপার-ইম্পোজ ও সাহাম বণ্টন।</p>
+    </div>
+    <div class="p-4 rounded-xl bg-slate-900/60 border border-white/5 hover:border-cyan-500/40 transition-all">
+      <div class="text-cyan-400 font-mono text-[10px] font-bold">ENGINE 06</div>
+      <h3 class="text-xs font-bold text-white mt-1">Juris Audit LegalTech</h3>
+      <p class="text-[11px] text-slate-400 mt-1 leading-snug">দেওয়ানি আরজি, বর্ডারলেস আবেদন ও স্ট্যাম্প ড্রাফট।</p>
+    </div>
+    <div class="p-4 rounded-xl bg-slate-900/60 border border-white/5 hover:border-cyan-500/40 transition-all">
+      <div class="text-cyan-400 font-mono text-[10px] font-bold">ENGINE 07</div>
+      <h3 class="text-xs font-bold text-white mt-1">Civil Trial Master</h3>
+      <p class="text-[11px] text-slate-400 mt-1 leading-snug">আর্থিক এখতিয়ার, ৫-কোটি আপিল ও DLR নজির ভল্ট।</p>
+    </div>
+    <div class="p-4 rounded-xl bg-slate-900/60 border border-white/5 hover:border-cyan-500/40 transition-all">
+      <div class="text-cyan-400 font-mono text-[10px] font-bold">ENGINE 08</div>
+      <h3 class="text-xs font-bold text-white mt-1">Studio Passport Master</h3>
+      <p class="text-[11px] text-slate-400 mt-1 leading-snug">৬০০ DPI পাসপোর্ট সাইজ ছবি ও এনআইডি রিস্টোর।</p>
+    </div>
+    <div class="p-4 rounded-xl bg-slate-900/60 border border-white/5 hover:border-cyan-500/40 transition-all">
+      <div class="text-cyan-400 font-mono text-[10px] font-bold">ENGINE 09</div>
+      <h3 class="text-xs font-bold text-white mt-1">Photoshop Studio Forge</h3>
+      <p class="text-[11px] text-slate-400 mt-1 leading-snug">ফটোশপ ৭.০ ফরেনসিক এডিটিং ও জিরো-ওয়েস্ট প্রিন্ট।</p>
+    </div>
+    <div class="p-4 rounded-xl bg-slate-900/60 border border-white/5 hover:border-cyan-500/40 transition-all">
+      <div class="text-cyan-400 font-mono text-[10px] font-bold">ENGINE 10</div>
+      <h3 class="text-xs font-bold text-white mt-1">Chamber Ledger & CMS</h3>
+      <p class="text-[11px] text-slate-400 mt-1 leading-snug">ক্লায়েন্ট ট্র্যাকিং, বাকী লেজার ও A4 ডাবল ক্যাশ মেমো।</p>
+    </div>
+  </div>
+</section>
+
+<!-- 🧮 LIVE INTERACTIVE BHUMI-MATH CALCULATOR (আনা-গণ্ডা ➔ শতক ক্যালকুলেটর) -->
+<section id="calculator" class="glass-panel p-6 md:p-10 border-emerald-500/30 shadow-2xl reveal">
+  <div class="text-left border-b border-white/10 pb-4 mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+    <div>
+      <h2 class="text-xl md:text-2xl font-bold text-white flex items-center gap-2">
+        <i data-lucide="calculator" class="w-6 h-6 text-emerald-400"></i>
+        ডিজিটাল খতিয়ান আনা-গণ্ডা ও হিস্যা ক্যালকুলেটর
+      </h2>
+      <p class="text-xs text-slate-400 mt-1">১৬ আনা (৭৬৮০০ তিল) সূত্রের ওপর ভিত্তি করে জমির শতক ও স্কয়ার ফুট রূপান্তর</p>
+    </div>
+    <span class="text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 px-3 py-1 rounded-full uppercase tracking-wider font-bold">Bhumi-Math Engine</span>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 text-left">
+    <!-- Calculator Controls -->
+    <div class="lg:col-span-2 space-y-5">
+      <div>
+        <label class="text-xs font-bold text-slate-300 block mb-1.5">১. খতিয়ানের মোট জমির পরিমাণ (শতক / ডেসিমেল):</label>
+        <input type="number" id="calc-total-land" class="calc-input w-full text-base" placeholder="উদাহরণ: 100" value="100">
+      </div>
+
+      <div>
+        <label class="text-xs font-bold text-slate-300 block mb-2">২. খতিয়ানের হিস্যা ইনপুট দিন (আনা-গণ্ডা-কড়া-ক্রান্তি-তিল):</label>
+        <div class="grid grid-cols-5 gap-2.5">
+          <div>
+            <span class="text-[10px] text-slate-400 block text-center mb-1">আনা (০-১৬)</span>
+            <input type="number" id="calc-ana" class="calc-input text-center text-amber-400 w-full" value="৪" min="0" max="16">
+          </div>
+          <div>
+            <span class="text-[10px] text-slate-400 block text-center mb-1">গণ্ডা (০-২০)</span>
+            <input type="number" id="calc-ganda" class="calc-input text-center text-amber-400 w-full" value="০" min="0" max="20">
+          </div>
+          <div>
+            <span class="text-[10px] text-slate-400 block text-center mb-1">কড়া (০-৪)</span>
+            <input type="number" id="calc-kora" class="calc-input text-center text-amber-400 w-full" value="০" min="0" max="4">
+          </div>
+          <div>
+            <span class="text-[10px] text-slate-400 block text-center mb-1">ক্রান্তি (০-৩)</span>
+            <input type="number" id="calc-kranti" class="calc-input text-center text-amber-400 w-full" value="০" min="0" max="3">
+          </div>
+          <div>
+            <span class="text-[10px] text-slate-400 block text-center mb-1">তিল (০-২০)</span>
+            <input type="number" id="calc-til" class="calc-input text-center text-amber-400 w-full" value="০" min="0" max="20">
+          </div>
+        </div>
+      </div>
+
+      <button onclick="calculateLandShare()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/30">
+        <i data-lucide="cpu" class="w-4 h-4"></i> হিস্যা ও প্রাপ্য জমি হিসাব করুন
+      </button>
+    </div>
+
+    <!-- Output Display Card -->
+    <div class="bg-slate-950/80 p-6 rounded-2xl border border-emerald-500/30 flex flex-col justify-between text-center">
+      <div>
+        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">মোট প্রাপ্য জমির পরিমাণ</p>
+        <div class="text-4xl font-extrabold text-emerald-400 mt-2 font-mono-code" id="res-land-decimal">২৫.০০ শতক</div>
+        <p class="text-[11px] text-slate-400 mt-1" id="res-land-sqft">(১০৮৯.০০ বর্গফুট)</p>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-white/10 text-left text-xs space-y-2 font-mono-code">
+        <p class="text-slate-300 flex justify-between"><span>হিস্যা ভগ্নাংশ:</span> <span class="text-amber-400 font-bold" id="res-share-fraction">০.২৫০০০০</span></p>
+        <p class="text-slate-300 flex justify-between"><span>মোট তিল:</span> <span class="text-emerald-400 font-bold" id="res-total-til">১৯২০০ / ৭৬৮০০</span></p>
+      </div>
+
+      <a href="https://wa.me/8801715354960?text=আমি%20খতিয়ানের%20হিস্যা%20ও%20বাটোয়ারা%20যাচাই%20করতে%20চাই।" target="_blank" class="mt-5 text-[11px] text-emerald-400 hover:underline font-semibold block">
+        এই খতিয়ান দিয়ে বাটোয়ারা আরজি ড্রাফট করতে চান? ➔
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 🏛️ DUAL-CHAMBER JURISDICTION & SMART FILE DROP -->
+<section id="chamber" class="glass-panel p-6 md:p-10 border-amber-500/20 shadow-xl reveal">
+  <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+    <div class="space-y-4 text-left">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-amber-500/10 text-amber-400 text-[10px] font-bold uppercase">
+        <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> চেম্বারের অফিসিয়াল অবস্থান
+      </div>
+      <h2 class="text-2xl md:text-3xl font-extrabold text-white">শরীয়তপুর সদর ও চিকন্দী জজকোর্ট চেম্বার</h2>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
+        <div class="p-3.5 rounded-xl bg-slate-900/80 border border-amber-500/30">
+          <p class="text-xs font-bold text-amber-300 flex items-center gap-1.5"><i data-lucide="building" class="w-3.5 h-3.5"></i> ১. চিকন্দী চেম্বার:</p>
+          <p class="text-[11px] text-slate-300 mt-1 leading-relaxed">কালী বাড়ীর সামনে, স্কুল রোড, চিকন্দী (সিনিয়র সিভিল জজ আদালত ও ইউনিয়ন ভূমি অফিস সংলগ্ন)।</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-900/80 border border-amber-500/30">
+          <p class="text-xs font-bold text-amber-300 flex items-center gap-1.5"><i data-lucide="building-2" class="w-3.5 h-3.5"></i> ২. শরীয়তপুর সদর চেম্বার:</p>
+          <p class="text-[11px] text-slate-300 mt-1 leading-relaxed">জেলা আইনজীবী সমিতি ভবনের দক্ষিণ পার্শ্বে, শরীয়তপুর জেলা ও দায়রা জজ আদালত।</p>
+        </div>
+      </div>
+
+      <p class="text-xs text-slate-300 leading-relaxed max-w-xl pt-1">
+        দলিল-খতিয়ান যাচাই, ডিজিটাল ভূমি সেবা, বাটোয়ারা মামলার তফসিল প্রস্তুত এবং দেওয়ানি মামলার আইনি ড্রাফটের জন্য সরাসরি চেম্বারে আসুন অথবা ইমেইলে ফাইল পাঠান।
+      </p>
+      
+      <div class="pt-2 flex flex-wrap gap-4 text-xs font-semibold">
+        <a href="mailto:ibrahim.legaltech@gmail.com?subject=Document%20Verification%20Submission" class="text-amber-300 hover:text-amber-200 flex items-center gap-1.5 bg-amber-500/10 px-3.5 py-2 rounded-lg border border-amber-500/30 transition-all">
+          <i data-lucide="mail" class="w-4 h-4 text-amber-400"></i> ইমেইল: ibrahim.legaltech@gmail.com
+        </a>
+        <a href="https://wa.me/8801715354960?text=আসসালামু%20আলাইকুম%20ইব্রাহীম%20ভাই,%20আমি%20পরামর্শ%20নিতে%20চাই।" target="_blank" class="text-emerald-300 hover:text-emerald-200 flex items-center gap-1.5 bg-emerald-500/10 px-3.5 py-2 rounded-lg border border-emerald-500/30 transition-all">
+          <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i> হোয়াটসঅ্যাপ: 01715-35 49 60
+        </a>
+      </div>
+    </div>
+
+    <!-- QR Code Module -->
+    <a href="mailto:ibrahim.legaltech@gmail.com?subject=দলিল%20ও%20খতিয়ান%20ফাইল%20সাবমিশন" class="bg-white p-4 rounded-2xl border-2 border-emerald-500 text-center shadow-2xl w-52 shrink-0 hover:scale-105 transition-all block group">
+      <div class="w-36 h-36 mx-auto bg-slate-100 flex items-center justify-center rounded-lg border border-slate-300 overflow-hidden">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=mailto:ibrahim.legaltech@gmail.com?subject=Document%20Verification%20Submission" alt="Scan QR Code" class="w-full h-full object-contain">
+      </div>
+      <p class="text-[11px] font-bold text-emerald-800 mt-2.5 group-hover:text-emerald-600 transition-colors">স্ক্যান করে ফাইল পাঠান</p>
+    </a>
+  </div>
+</section>
+
+<!-- 🏛️ PRACTICE PILLARS (SLA 01 - 20) -->
+<section id="wings" class="space-y-16 reveal">
+  <!-- Pillar 01 -->
+  <div class="space-y-6">
+    <div class="flex items-center gap-3 border-b border-amber-500/30 pb-3 text-left">
+      <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400"><i data-lucide="scale" class="w-5 h-5"></i></div>
+      <div>
+        <h2 class="text-xl md:text-2xl font-bold text-white">পিলার ০১: দেওয়ানি মামলা ও স্বত্বলিপি ফরেনসিক্স উইং</h2>
+        <p class="text-xs text-amber-400/90 font-medium">সিনিয়র সিভিল জজ আদালত ও জেলা জজ আদালতের দেওয়ানি মোকদ্দমা ড্রাফটিং</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+      <div class="service-card border border-amber-500/30">
+        <h3 class="text-base font-bold text-white">স্বত্ব ঘোষণা ও দখল পুনরুদ্ধার আরজি</h3>
+        <p class="text-xs text-slate-300 mt-2 leading-relaxed">Specific Relief Act ধারা ৪২ ও ৮ অনুযায়ী সিএস-এসএ-আরএস-বিআরএস চেইন স্বত্বনামা মিলিয়ে দেওয়ানি আদালতের নিখুঁত আরজি ড্রাফটিং।</p>
+      </div>
+      <div class="service-card border border-amber-500/30">
+        <h3 class="text-base font-bold text-white">১৬ আনা বাটোয়ারা সহম ও আরজি ড্রাফটিং</h3>
+        <p class="text-xs text-slate-300 mt-2 leading-relaxed">Partition Act 1893 অনুযায়ী ৪ পুরুষের ওয়ারিশদের ১৬ আনা (৭৬৮০০ তিল) গাণিতিক সূত্রে সহম বণ্টন সম্বলিত বাটোয়ারা আরজি।</p>
+      </div>
+      <div class="service-card border border-amber-500/30">
+        <h3 class="text-base font-bold text-white">জাল দলিল বাতিল ও বালাম অডিট</h3>
+        <p class="text-xs text-slate-300 mt-2 leading-relaxed">Specific Relief Act ধারা ৩৯ অনুযায়ী সাব-রেজিস্ট্রি বালামের জালিয়াতি ও ভুয়া দাতা প্রমাণ করে দলিল বাতিলের আরজি।</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pillar 02 -->
+  <div class="space-y-6">
+    <div class="flex items-center gap-3 border-b border-emerald-500/30 pb-3 text-left">
+      <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400"><i data-lucide="map" class="w-5 h-5"></i></div>
+      <div>
+        <h2 class="text-xl md:text-2xl font-bold text-white">পিলার ০২: বিজ্ঞানসম্মত ডিজিটাল ভূমি জরিপ ও QGIS ম্যাপিং</h2>
+        <p class="text-xs text-emerald-400 font-medium">BTM (EPSG:3106) প্রজেকশনে স্যাটেলাইট সুপার-ইম্পোজ ও জবরদখল চিহ্নিতকরণ</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+      <div class="service-card border border-emerald-500/30">
+        <h3 class="text-base font-bold text-white">BTM স্যাটেলাইট ও মৌজা সুপার-ইম্পোজ</h3>
+        <p class="text-xs text-slate-300 mt-2 leading-relaxed">মৌজা নকশাকে BTM (EPSG:3106) প্রজেকশনে গুগল স্যাটেলাইটের সাথে ১ ইঞ্চি নিখুঁত ওভারলে করে ম্যাপ প্রস্তুত।</p>
+      </div>
+      <div class="service-card border border-emerald-500/30">
+        <h3 class="text-base font-bold text-white">১ ইঞ্চি নিখুঁত জবরদখল রিপোর্ট</h3>
+        <p class="text-xs text-slate-300 mt-2 leading-relaxed">মৌজা সীমানা পিলারের সাথে বর্তমান স্থাপনা মিলিয়ে কে কার কতটুকু জমি দখল করেছে তার ডিজিটাল ভেক্টর রিপোর্ট।</p>
+      </div>
+      <div class="service-card border border-emerald-500/30">
+        <h3 class="text-base font-bold text-white">২৬ আদেশ ৯ রুল সার্ভে কমিশন রিপোর্ট</h3>
+        <p class="text-xs text-slate-300 mt-2 leading-relaxed">আদালত নিযুক্ত কমিশনারের সহায়তায় বিরোধপূর্ণ জমির বৈজ্ঞানিক পরিমাপ ও এজলাসে পেশযোগ্য রিপোর্ট।</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pillar 03 -->
+  <div class="space-y-6">
+    <div class="flex items-center gap-3 border-b border-cyan-500/30 pb-3 text-left">
+      <div class="w-10 h-10 rounded-xl bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-cyan-400"><i data-lucide="file-check-2" class="w-5 h-5"></i></div>
+      <div>
+        <h2 class="text-xl md:text-2xl font-bold text-white">পিলার ০৩: ডিজিটাল ভূমি প্রশাসন, ই-নামজারি ও রাজস্ব</h2>
+        <p class="text-xs text-cyan-400 font-medium">নাগরিক প্রোফাইল, হোল্ডিং খোলা, খারিজ ও মিস কেস সেবা</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+      <div class="service-card border border-cyan-500/30">
+        <h3 class="text-base font-bold text-white">সর্বপ্রকার ই-নামজারি ও ট্র্যাকিং</h3>
+        <p class="text-xs text-slate-300 mt-2 leading-relaxed">ক্রয়, হেবা, ওয়ারিশান ও আদালতের ডিক্রি সূত্রে প্রাপ্ত জমির প্রি-অডিট সহ অনলাইনে নির্ভুল খারিজ প্রসেসিং।</p>
+      </div>
+      <div class="service-card border border-cyan-500/30">
+        <h3 class="text-base font-bold text-white">নামজারি বাতিল ও মিস কেস (Mis-Case)</h3>
+        <p class="text-xs text-slate-300 mt-2 leading-relaxed">SAT Act ধারা ১৪৩/১১৭ অনুযায়ী ভুয়া নামজারি বাতিলের মিস কেস ও এডিসি রাজস্ব বরাবর ১৪৪ ধারা আপিল।</p>
+      </div>
+      <div class="service-card border border-cyan-500/30">
+        <h3 class="text-base font-bold text-white">অনলাইন ভূমি উন্নয়ন কর ও দাখিলা</h3>
+        <p class="text-xs text-slate-300 mt-2 leading-relaxed">বকেয়া খাজনা হিসাব, ডিজিটাল খাজনা প্রদান এবং কিউআর কোডযুক্ত সরকারি দাখিলা তাৎক্ষণিক উত্তোলন।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 💡 FAQ ACCORDION -->
+<section id="faq" class="glass-panel p-6 md:p-10 border-white/5 space-y-6 reveal text-left">
+  <div class="border-b border-white/10 pb-4">
+    <h2 class="text-xl md:text-2xl font-bold text-white">সাধারণ <span class="text-amber-400">প্রশ্নোত্তর</span></h2>
+    <p class="text-xs text-slate-400 mt-1">জমিজমা ও আইনি সেবার সাধারণ জিজ্ঞাসাসমূহ</p>
+  </div>
+  <div class="space-y-3.5 text-xs">
+    <details class="group bg-slate-900/60 border border-white/5 rounded-xl p-4 cursor-pointer">
+      <summary class="flex justify-between items-center font-bold text-white text-sm list-none select-none">
+        <span>১. সিএস থেকে বিআরএস খতিয়ানে দাগের গরমিল থাকলে সমাধান কী?</span>
+        <i data-lucide="chevron-down" class="w-4 h-4 text-amber-400 transition-transform group-open:rotate-180"></i>
+      </summary>
+      <div class="mt-3 text-slate-300 leading-relaxed pt-3 border-t border-white/5">
+        সিএস, এসএ, আরএস ও বিআরএস খতিয়ানের ধারাবাহিক চেইন মিলিয়ে এবং জেলা রেকর্ড রুমের মূল বালাম ও ছিটা বই তল্লাশি করে এসি ল্যান্ড কার্যালয়ে মিস কেস অথবা সিনিয়র সিভিল জজ আদালতে আরজি ড্রাফট করে সমাধান দেওয়া হয়।
+      </div>
+    </details>
+    <details class="group bg-slate-900/60 border border-white/5 rounded-xl p-4 cursor-pointer">
+      <summary class="flex justify-between items-center font-bold text-white text-sm list-none select-none">
+        <span>২. স্যাটেলাইট ম্যাপ ও মৌজা নকশার সুপার-ইম্পোজ কীভাবে জবরদখল প্রমাণ করে?</span>
+        <i data-lucide="chevron-down" class="w-4 h-4 text-amber-400 transition-transform group-open:rotate-180"></i>
+      </summary>
+      <div class="mt-3 text-slate-300 leading-relaxed pt-3 border-t border-white/5">
+        সরকারি অনুমোদিত মৌজা নকশাকে QGIS সফটওয়্যারে BTM প্রজেকশনে গুগল স্যাটেলাইটের ওপর বসানো হয়। ফলে সীমানা পিলার থেকে কে কার কত ইঞ্চি জমি জোরপূর্বক দখলে রেখেছে তা পরিষ্কার ভেসে ওঠে।
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- 📍 FOOTER -->
+<footer class="bg-slate-950 border-t border-white/5 py-12 text-center space-y-4">
+  <div class="container mx-auto px-6 space-y-3">
+    <h3 class="text-base font-bold text-white">মোঃ ইব্রাহীম হোসেন</h3>
+    <p class="text-xs text-amber-400 font-semibold">লিগ্যাল টেকনোলজিস্ট ও নিবন্ধিত আইনজীবী সহকারী (মোহুরী) | BTEB সার্টিফাইড আমিন</p>
+    <p class="text-[11px] text-slate-400">
+      চেম্বার ১: কালী বাড়ীর সামনে, স্কুল রোড, চিকন্দী (সিনিয়র সিভিল জজ আদালত সংলগ্ন) <br>
+      চেম্বার ২: জেলা আইনজীবী সমিতির দক্ষিণ পার্শ্বে, শরীয়তপুর জেলা জজকোর্ট
+    </p>
+    <p class="text-[9px] font-mono tracking-widest text-slate-600 uppercase pt-2">
+      Legal-Tech & Land Forensics © 2026 Md Ibrahim Hossain
+    </p>
+  </div>
+</footer>
+
+</main>
+
+<!-- 📱 MOBILE FLOATING ACTION BAR -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#020617]/95 backdrop-blur-lg border-t border-white/10 py-2.5 px-4 flex justify-between items-center gap-2 shadow-2xl">
+  <a href="https://wa.me/8801715354960?text=আসসালামু%20আলাইকুম%20ইব্রাহীম%20ভাই,%20আমি%20পরামর্শ%20নিতে%20চাই।" target="_blank" class="flex-1 bg-emerald-600 text-white py-2 rounded-xl text-[11px] font-bold flex items-center justify-center gap-1.5 shadow-md">
+    <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> হোয়াটসঅ্যাপ
+  </a>
+  <a href="mailto:ibrahim.legaltech@gmail.com?subject=দলিল/খতিয়ান%20ফাইল%20সাবমিশন" class="flex-1 bg-amber-500 text-black py-2 rounded-xl text-[11px] font-bold flex items-center justify-center gap-1.5 shadow-md">
+    <i data-lucide="mail" class="w-3.5 h-3.5"></i> ফাইল পাঠান
+  </a>
+  <a href="tel:+8801715354960" class="flex-1 bg-slate-800 border border-white/10 text-white py-2 rounded-xl text-[11px] font-bold flex items-center justify-center gap-1.5">
+    <i data-lucide="phone" class="w-3.5 h-3.5 text-amber-400"></i> কল করুন
+  </a>
+</div>
+
+<script>
+// 🧮 16-ANA TO DECIMAL CALCULATION ENGINE
+function calculateLandShare() {
+  const totalLand = parseFloat(document.getElementById('calc-total-land').value) || 0;
+  const ana = parseFloat(document.getElementById('calc-ana').value) || 0;
+  const ganda = parseFloat(document.getElementById('calc-ganda').value) || 0;
+  const kora = parseFloat(document.getElementById('calc-kora').value) || 0;
+  const kranti = parseFloat(document.getElementById('calc-kranti').value) || 0;
+  const til = parseFloat(document.getElementById('calc-til').value) || 0;
+
+  const totalTil = (ana * 4800) + (ganda * 240) + (kora * 60) + (kranti * 20) + til;
+  const shareFraction = totalTil / 76800;
+  const calculatedLand = totalLand * shareFraction;
+  const calculatedSqFt = calculatedLand * 435.6;
+
+  document.getElementById('res-land-decimal').innerText = calculatedLand.toFixed(2) + " শতক";
+  document.getElementById('res-land-sqft').innerText = "(" + calculatedSqFt.toFixed(2) + " বর্গফুট)";
+  document.getElementById('res-share-fraction').innerText = shareFraction.toFixed(6);
+  document.getElementById('res-total-til').innerText = totalTil + " / ৭৬৮০০";
+}
+
+// Mobile Menu Toggle
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+});
+
+// Scroll Reveal Observer
+function reveal() {
+  const reveals = document.querySelectorAll(".reveal");
+  for (let i = 0; i < reveals.length; i++) {
+    const windowHeight = window.innerHeight;
+    const elementTop = reveals[i].getBoundingClientRect().top;
+    if (elementTop < windowHeight - 60) {
+      reveals[i].classList.add("active");
+    }
+  }
+}
+window.addEventListener("scroll", reveal);
+reveal();
+lucide.createIcons();
+</script>
 </body>
 </html>
