@@ -282,32 +282,32 @@ details summary::-webkit-details-marker {
     <div class="lg:col-span-2 space-y-5">
       <div>
         <label class="text-xs font-bold text-slate-300 block mb-1.5">খতিয়ানের মোট জমির পরিমাণ (শতক / ডেসিমেল):</label>
-        <input type="number" id="calc-total-land" class="calc-input w-full text-base" placeholder="উদাহরণ: 100" value="100" oninput="calculateLandShare()">
+        <input type="text" inputmode="numeric" id="calc-total-land" class="calc-input w-full text-base" placeholder="উদাহরণ: 100" value="100" oninput="calculateLandShare()">
       </div>
 
-      <!-- Mode 1: Ana-Ganda Inputs (Fixed value="4" and "0" instead of Bengali digits) -->
+      <!-- Mode 1: Ana-Ganda Inputs -->
       <div id="mode-inputs-ana" class="space-y-3">
         <label class="text-xs font-bold text-slate-300 block">হিস্যা ইনপুট দিন (১৬ আনা ফর্ম্যাট):</label>
         <div class="grid grid-cols-5 gap-2.5">
           <div>
             <span class="text-[10px] text-slate-400 block text-center mb-1">আনা (০-১৬)</span>
-            <input type="number" id="calc-ana" class="calc-input text-center text-amber-400 w-full" value="4" min="0" max="16" oninput="calculateLandShare()">
+            <input type="text" inputmode="numeric" id="calc-ana" class="calc-input text-center text-amber-400 w-full" value="4" oninput="calculateLandShare()">
           </div>
           <div>
             <span class="text-[10px] text-slate-400 block text-center mb-1">গণ্ডা (০-২০)</span>
-            <input type="number" id="calc-ganda" class="calc-input text-center text-amber-400 w-full" value="0" min="0" max="20" oninput="calculateLandShare()">
+            <input type="text" inputmode="numeric" id="calc-ganda" class="calc-input text-center text-amber-400 w-full" value="0" oninput="calculateLandShare()">
           </div>
           <div>
             <span class="text-[10px] text-slate-400 block text-center mb-1">কড়া (০-৪)</span>
-            <input type="number" id="calc-kora" class="calc-input text-center text-amber-400 w-full" value="0" min="0" max="4" oninput="calculateLandShare()">
+            <input type="text" inputmode="numeric" id="calc-kora" class="calc-input text-center text-amber-400 w-full" value="0" oninput="calculateLandShare()">
           </div>
           <div>
             <span class="text-[10px] text-slate-400 block text-center mb-1">ক্রান্তি (০-৩)</span>
-            <input type="number" id="calc-kranti" class="calc-input text-center text-amber-400 w-full" value="0" min="0" max="3" oninput="calculateLandShare()">
+            <input type="text" inputmode="numeric" id="calc-kranti" class="calc-input text-center text-amber-400 w-full" value="0" oninput="calculateLandShare()">
           </div>
           <div>
             <span class="text-[10px] text-slate-400 block text-center mb-1">তিল (০-২০)</span>
-            <input type="number" id="calc-til" class="calc-input text-center text-amber-400 w-full" value="0" min="0" max="20" oninput="calculateLandShare()">
+            <input type="text" inputmode="numeric" id="calc-til" class="calc-input text-center text-amber-400 w-full" value="0" oninput="calculateLandShare()">
           </div>
         </div>
       </div>
@@ -318,11 +318,11 @@ details summary::-webkit-details-marker {
         <div class="grid grid-cols-2 gap-3">
           <div>
             <span class="text-[10px] text-slate-400 block mb-1">দশমিক শেয়ার (উদাহরণ: 0.2500)</span>
-            <input type="number" id="calc-decimal-share" class="calc-input text-amber-400 w-full" value="0.2500" step="0.0001" oninput="calculateLandShare()">
+            <input type="text" inputmode="numeric" id="calc-decimal-share" class="calc-input text-amber-400 w-full" value="0.2500" oninput="calculateLandShare()">
           </div>
           <div>
             <span class="text-[10px] text-slate-400 block mb-1">পয়েন্ট সিস্টেম (যেমন: ১০০০ পয়েন্টের মধ্যে)</span>
-            <input type="number" id="calc-point-share" class="calc-input text-amber-400 w-full" value="250" oninput="calculatePointShare()">
+            <input type="text" inputmode="numeric" id="calc-point-share" class="calc-input text-amber-400 w-full" value="250" oninput="calculatePointShare()">
           </div>
         </div>
       </div>
