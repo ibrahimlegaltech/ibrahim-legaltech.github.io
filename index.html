@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="bn" class="scroll-smooth">
+<html lang="bn" class="scroll-smooth" oncontextmenu="return false;">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0,viewport-fit=cover">
@@ -75,6 +75,10 @@ body {
   background-color: #020617;
   color: #cbd5e1;
   overflow-x: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .font-mono-code {
   font-family: 'JetBrains Mono', monospace;
@@ -128,6 +132,12 @@ details summary::-webkit-details-marker {
   border-color: #10b981;
   box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
 }
+#privacy-curtain {
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+  background: #020617; z-index: 999999; display: none;
+  justify-content: center; align-items: center; color: #f59e0b;
+  font-family: 'Montserrat', sans-serif; font-weight: 900; letter-spacing: 2px;
+}
 @media print {
   body { background: #ffffff !important; color: #000000 !important; }
   .no-print { display: none !important; }
@@ -137,6 +147,9 @@ details summary::-webkit-details-marker {
 </style>
 </head>
 <body class="bg-grid antialiased min-h-screen selection:bg-amber-500 selection:text-black pb-24 md:pb-0">
+
+<!-- 🛡️ PRIVACY CURTAIN OVERLAY -->
+<div id="privacy-curtain">🔒 SECURE LEGAL-TECH CHAMBER PROTECTED</div>
 
 <!-- 🏛️ STICKY HEADER -->
 <header class="fixed w-full z-50 bg-[#020617]/95 backdrop-blur-xl border-b border-white/5">
@@ -162,6 +175,7 @@ details summary::-webkit-details-marker {
     <a href="#calculator" class="text-xs font-semibold text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-1"><i data-lucide="calculator" class="w-3.5 h-3.5"></i> ভূমি ক্যালকুলেটর</a>
     <a href="#profile" class="text-xs font-semibold text-amber-400 hover:text-amber-300 transition-colors flex items-center gap-1"><i data-lucide="user" class="w-3.5 h-3.5"></i> পরিচিতি</a>
     <a href="#wings" class="text-xs font-semibold text-slate-300 hover:text-amber-400 transition-colors">সেবা উইং (২০-SLA)</a>
+    <a href="#engines" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors flex items-center gap-1"><i data-lucide="cpu" class="w-3.5 h-3.5"></i> লিগ্যাল-টেক কোর</a>
     <a href="#resources" class="text-xs font-semibold text-purple-400 hover:text-purple-300 transition-colors flex items-center gap-1"><i data-lucide="external-link" class="w-3.5 h-3.5"></i> সরকারি লিংক</a>
     <a href="#chamber" class="text-xs font-semibold text-slate-300 hover:text-amber-400 transition-colors">যোগাযোগ</a>
     <a href="https://wa.me/8801715354960?text=আসসালামু%20আলাইকুম%20ইব্রাহীম%20ভাই,%20আমি%20পরামর্শ%20নিতে%20চাই।" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2 rounded-full text-xs font-bold transition-all shadow-md shadow-emerald-600/20 flex items-center gap-1.5">
@@ -233,11 +247,10 @@ details summary::-webkit-details-marker {
   </div>
 </section>
 
-<!-- 👤 PRINCIPAL ARCHITECT & TECHNOCRAT PROFILE (BLACK BORDER HIDDEN VIA SCALE-UP) -->
+<!-- 👤 PRINCIPAL ARCHITECT & TECHNOCRAT PROFILE (CLEAN FULL FRAME) -->
 <section id="profile" class="glass-panel p-6 md:p-10 border-amber-500/30 shadow-2xl reveal">
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center text-left">
     <div class="mx-auto lg:mx-0 w-60 h-72 sm:w-64 sm:h-80 rounded-2xl overflow-hidden border-4 border-amber-500/60 shadow-[0_0_35px_rgba(245,158,11,0.3)] bg-slate-950 shrink-0 flex items-center justify-center p-1.5">
-      <!-- 🖼️ Image scaled up slightly (scale-[1.08]) to perfectly hide the source image's black border -->
       <img src="https://raw.githubusercontent.com/ibrahimlegaltech/Legal-Tech-Assets/main/ibrahim.png" alt="Md Ibrahim Hossain" class="w-full h-full object-cover object-center rounded-xl scale-[1.08] group-hover:scale-[1.12] transition-transform duration-500" onerror="this.onerror=null; this.src=''; this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-amber-400\'><i data-lucide=\'user\' class=\'w-16 h-16\'></i></div>'; lucide.createIcons();">
     </div>
     <div class="lg:col-span-2 space-y-4">
@@ -245,7 +258,7 @@ details summary::-webkit-details-marker {
       <h2 class="text-2xl md:text-3xl font-extrabold text-white">মোঃ ইব্রাহীম হোসেন</h2>
       <p class="text-xs md:text-sm text-amber-300 font-bold">লিগ্যাল টেকনোলজিস্ট, নিবন্ধিত আইনজীবী সহকারী ও বিটিইবি সার্টিফাইড ল্যান্ড সার্ভেয়ার</p>
       <p class="text-xs text-slate-300 leading-relaxed">
-        চিকন্দী সিনিয়র সিভিল জজ আদালত এবং শরীয়তপুর জেলা জজ কোর্টে দীর্ঘদিনের অভিজ্ঞতার আলোকে আমরা ঐতিহ্যবাহী আইনি প্র্যাকটিস এবং আধুনিক কম্পিউটেশনাল প্রসেসিং কোর, QGIS ক্যাডাস্ট্রাল ম্যাপিং ও ডিজিটাল ভূমি প্রশাসনের এক যুগান্তকারী মেলবন্ধন ঘটিয়েছি। জমির মালিকানা চেইন অডিট, বাটোয়ারা সাহাম বণ্টন এবং নিখুঁত আইনি ড্রাফটিংয়ের মাধ্যমে মক্কেলের আইনি নিরাপত্তা নিশ্চিত করাই আমাদের প্রধান অঙ্গীকার।
+        চিকন্দী সিনিয়র সিভিল জজ আদালত এবং শরীয়তপুর জেলা জজ কোর্টে দীর্ঘদিনের অভিজ্ঞতার আলোকে আমরা ঐতিহ্যবাহী আইনি প্র্যাকটিস এবং আধুনিক কম্পিউটেশনাল প্রসেসিং কোর, ক্যাডাস্ট্রাল ম্যাপিং ও ডিজিটাল ভূমি প্রশাসনের এক যুগান্তকারী মেলবন্ধন ঘটিয়েছি। জমির মালিকানা চেইন অডিট, বাটোয়ারা সাহাম বণ্টন এবং নিখুঁত আইনি ড্রাফটিংয়ের মাধ্যমে মক্কেলের আইনি নিরাপত্তা নিশ্চিত করাই আমাদের প্রধান অঙ্গীকার।
       </p>
       <div class="pt-2 flex flex-wrap gap-3 text-xs">
         <span class="bg-slate-900 px-3 py-1.5 rounded-lg border border-white/10 text-slate-300 flex items-center gap-1.5"><i data-lucide="award" class="w-3.5 h-3.5 text-amber-400"></i> BTEB Certified Surveyor</span>
@@ -498,7 +511,7 @@ details summary::-webkit-details-marker {
     </div>
   </div>
 
-  <!-- Pillar 02: QGIS & GIS Mapping (SLA 05 - 08) -->
+  <!-- Pillar 02: GIS & Mapping (SLA 05 - 08) -->
   <div class="space-y-6">
     <div class="flex items-center gap-3 border-b border-emerald-500/30 pb-3 text-left">
       <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400"><i data-lucide="map" class="w-5 h-5"></i></div>
@@ -690,7 +703,64 @@ details summary::-webkit-details-marker {
   </a>
 </div>
 
+<!-- 🛡️ 9-LAYER CLIENT-SIDE DLP & ANTI-INSPECTION SECURITY SCRIPT -->
 <script>
+// LAYER 1: Right-Click Prevention
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+// LAYER 2: Keyboard Shortcut Blocking (F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+S, Ctrl+P)
+document.addEventListener('keydown', e => {
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
+    (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'p' || e.key === 'U' || e.key === 'S' || e.key === 'P'))
+  ) {
+    e.preventDefault();
+    alert('🔒 SECURITY ALERT: Source inspection and shortcut printing are restricted by enterprise DLP policy.');
+    return false;
+  }
+});
+
+// LAYER 3: Text Selection & Drag Blocking
+document.addEventListener('selectstart', e => e.preventDefault());
+document.addEventListener('dragstart', e => e.preventDefault());
+
+// LAYER 4 & 7: DevTools / Inspector Open Detection & Infinite Debugger Loop
+(function() {
+  const threshold = 160;
+  const checkDevTools = function() {
+    if (window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold) {
+      document.body.innerHTML = '<h1 style="color:red; text-align:center; margin-top:20vh; font-family:monospace;">SECURITY VIOLATION: Developer Tools Detected. Session Terminated.</h1>';
+      debugger;
+    }
+  };
+  setInterval(checkDevTools, 1000);
+})();
+
+// LAYER 5: Clipboard Poisoning
+document.addEventListener('copy', e => {
+  e.clipboardData.setData('text/plain', '🔒 PROTECTED ASSET: Unauthorized copying of source architecture or text is strictly prohibited by enterprise security policy.');
+  e.preventDefault();
+});
+
+// LAYER 6: Window Blur / Privacy Curtain (Anti-Screenshot / Tab Switch Protection)
+window.addEventListener('blur', () => {
+  document.getElementById('privacy-curtain').style.display = 'flex';
+});
+window.addEventListener('focus', () => {
+  document.getElementById('privacy-curtain').style.display = 'none';
+});
+
+// LAYER 8: Console Security Banner
+console.clear();
+console.log("%c⚠️ ENTERPRISE SECURITY WARNING ⚠️", "color: red; font-size: 24px; font-weight: bold; background: black; padding: 10px;");
+console.log("%cThis is a secure proprietary environment. Unauthorized scraping, source inspection, or data exfiltration will trigger automated security auditing and legal countermeasures.", "color: #00f2ff; font-size: 14px; font-weight: bold;");
+
+// LAYER 9: Prevent iframe embedding (Clickjacking defense)
+if (window.self !== window.top) {
+  window.top.location.href = window.self.location.href;
+}
+
 // 🧮 DUAL-MODE CALCULATOR LOGIC (Ana-Ganda vs Point System)
 let currentCalcMode = 'ana';
 
