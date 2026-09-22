@@ -1,7 +1,7 @@
 {
   "name": "MD Ibrahim Hossain | Legal-Tech & Land Forensics",
   "short_name": "Ibrahim LegalTech",
-  "start_url": "/",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#020617",
   "theme_color": "#020617",
@@ -9,6 +9,11 @@
     {
       "src": "https://raw.githubusercontent.com/ibrahimlegaltech/Legal-Tech-Assets/main/logo.png",
       "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://raw.githubusercontent.com/ibrahimlegaltech/Legal-Tech-Assets/main/logo.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]
