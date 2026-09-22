@@ -9,6 +9,9 @@
 <meta name="keywords" content="মোঃ ইব্রাহীম হোসেন, লিগ্যাল টেকনোলজিস্ট, আইনজীবী সহকারী, মোহুরী, বিটিইবি সার্টিফাইড আমিন, ল্যান্ড সার্ভেয়ার, চিকন্দী সিনিয়র সিভিল জজ আদালত, শরীয়তপুর জেলা জজ কোর্ট, শরীয়তপুর জমি পরিমাপ, ই-নামজারি, নামজারি ট্র্যাকিং, খাজনা প্রদান, খতিয়ান চেইন, বাটোয়ারা মামলা ড্রাফটিং, মিস কেস">
 <link rel="canonical" href="https://ibrahim-legaltech.github.io/">
 
+<!-- PWA Manifest Link -->
+<link rel="manifest" href="./manifest.json">
+
 <!-- 🌐 Fonts & Stylesheets -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -511,7 +514,7 @@ details summary::-webkit-details-marker {
     </div>
   </div>
 
-  <!-- Pillar 02: GIS & Mapping (SLA 05 - 08) -->
+  <!-- Pillar 02: Mapping & Survey (SLA 05 - 08) -->
   <div class="space-y-6">
     <div class="flex items-center gap-3 border-b border-emerald-500/30 pb-3 text-left">
       <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400"><i data-lucide="map" class="w-5 h-5"></i></div>
@@ -712,11 +715,17 @@ document.addEventListener('contextmenu', e => e.preventDefault());
 document.addEventListener('keydown', e => {
   if (
     e.key === 'F12' ||
+    e.key === 'PrintScreen' ||
+    e.keyCode === 44 ||
     (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
     (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'p' || e.key === 'U' || e.key === 'S' || e.key === 'P'))
   ) {
     e.preventDefault();
-    alert('🔒 SECURITY ALERT: Source inspection and shortcut printing are restricted by enterprise DLP policy.');
+    navigator.clipboard.writeText('🔒 PROTECTED LEGAL-TECH ASSET');
+    document.getElementById('privacy-curtain').style.display = 'flex';
+    setTimeout(() => {
+      document.getElementById('privacy-curtain').style.display = 'none';
+    }, 2500);
     return false;
   }
 });
