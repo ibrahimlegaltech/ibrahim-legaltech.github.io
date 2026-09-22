@@ -1,8 +1,8 @@
-const CACHE_NAME = 'ibrahim-legaltech-v2';
+const CACHE_NAME = 'ibrahim-legaltech-v3';
 const assetsToCache = [
-  '/',
-  '/index.html',
-  '/manifest.json'
+  './',
+  './index.html',
+  './manifest.json'
 ];
 
 self.addEventListener('install', event => {
