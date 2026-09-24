@@ -711,7 +711,7 @@ details summary::-webkit-details-marker {
 // LAYER 1: Right-Click Prevention
 document.addEventListener('contextmenu', e => e.preventDefault());
 
-// LAYER 2: Keyboard Shortcut Blocking (F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+S, Ctrl+P)
+// LAYER 2: Keyboard Shortcut Blocking (F12, PrintScreen, Ctrl+Shift+I/J/C, Ctrl+U/S/P)
 document.addEventListener('keydown', e => {
   if (
     e.key === 'F12' ||
@@ -733,18 +733,6 @@ document.addEventListener('keydown', e => {
 // LAYER 3: Text Selection & Drag Blocking
 document.addEventListener('selectstart', e => e.preventDefault());
 document.addEventListener('dragstart', e => e.preventDefault());
-
-// LAYER 4 & 7: DevTools / Inspector Open Detection & Infinite Debugger Loop
-(function() {
-  const threshold = 160;
-  const checkDevTools = function() {
-    if (window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold) {
-      document.body.innerHTML = '<h1 style="color:red; text-align:center; margin-top:20vh; font-family:monospace;">SECURITY VIOLATION: Developer Tools Detected. Session Terminated.</h1>';
-      debugger;
-    }
-  };
-  setInterval(checkDevTools, 1000);
-})();
 
 // LAYER 5: Clipboard Poisoning
 document.addEventListener('copy', e => {
